@@ -42,5 +42,19 @@ new_df2 = df.drop('E', inplace=True)
 print('Now, the new df:\n', df, '\n')
 
 # RECREATING OUR DF...
+np.random.seed(101)
 df = pd.DataFrame(randn(5, 4), ['A', 'B', 'C', 'D', 'E'], ['W', 'X', 'Y', 'Z'])
-print(df.shape)
+print(df.shape, '\n')
+
+# Selecting rows
+
+print(df.loc['C'], '\n')
+print(df.loc[['A', 'B']], '\n')
+
+print(df.iloc[2], '\n')
+
+# Subsects of rows and columns
+
+print(df, '\n')
+print(df.loc['B', 'Y'], '\n')
+print(df.loc[['A', 'B'], ['W', 'Y']], '\n')
