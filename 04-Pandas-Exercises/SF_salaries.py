@@ -18,14 +18,7 @@ sal_2013 = sal[sal['Year'] == 2013]
 
 print(sum(sal_2013['JobTitle'].value_counts() == 1), '\n')
 
-
-def check_chief(title):
-    if 'chief' in title.lower():
-        return True
-    return False
-
-
-print(sum(sal['JobTitle'].apply(lambda x: check_chief(x))), '\n')
+print(sum(sal['JobTitle'].apply(lambda x: 'chief' in x.lower())), '\n')
 
 sal['title_length'] = sal['JobTitle'].apply(len)
 print(sal[['title_length', 'TotalPayBenefits']].corr())
