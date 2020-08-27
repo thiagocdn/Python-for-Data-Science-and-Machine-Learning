@@ -34,8 +34,6 @@ df3 = pd.DataFrame({'x': [1, 2, 3, 4, 5], 'y': [
 
 # df.iplot(kind='hist')
 
-
-@moz@moz
 # df[['A', 'B']].iplot(kind='spread')
 # df.iplot(kind='bubble', x='A', y='B', size='C')
 df.scatter_matrix()
