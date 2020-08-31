@@ -38,10 +38,10 @@ tickers = ['BAC', 'C', 'GS', 'JPM', 'MS', 'WFC']
 # df.xs('BAC', axis=1, level=0)[['Open', 'High', 'Low', 'Close']].loc[(
 #     df.index >= '2015-01-01') & (df.index <= '2015.12.31')].iplot(kind='candle')
 
-# df.xs('BAC', axis=1, level=0)[['Open', 'High', 'Low', 'Close']].loc[(
-#     df.index >= '2015-01-01') & (df.index <= '2015.12.31')].ta_plot(study='sma')
+# df.xs('BAC', axis=1, level=0)['Close'].loc[(
+#     df.index >= '2015-01-01') & (df.index <= '2015.12.31')].ta_plot(study='sma', periods=[13, 21, 55])
 
-df.xs('BAC', axis=1, level=0)[['Open', 'High', 'Low', 'Close']].loc[(
+df.xs('BAC', axis=1, level=0)['Close'].loc[(
     df.index >= '2015-01-01') & (df.index <= '2015.12.31')].ta_plot(study='boll')
 
 # %%
